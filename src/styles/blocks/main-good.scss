@@ -1,0 +1,15 @@
+.main-good {
+  background-color: $main-bgc;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: #282828;
+  }
+
+  &__image {
+    width: 100%;
+  }
+}

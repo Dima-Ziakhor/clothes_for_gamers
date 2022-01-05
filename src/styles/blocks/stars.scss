@@ -1,0 +1,14 @@
+.stars {
+  display: flex;
+
+  &__star {
+    height: 18px;
+    width: 18px;
+    background: url("../icons/star.png") center center;
+
+    &:not(:last-child) {
+      margin-right: 1px;
+      background: url("../icons/star_active.png") center center;
+    }
+  }
+}
