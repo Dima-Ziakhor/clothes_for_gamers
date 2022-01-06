@@ -11,6 +11,10 @@
     color: #282828;
   }
 
+  &__title-additional {
+    display: none;
+  }
+
   &__good-wrapper {
     position: relative;
     max-width: 855px;
