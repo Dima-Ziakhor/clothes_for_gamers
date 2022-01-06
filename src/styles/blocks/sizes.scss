@@ -1,0 +1,31 @@
+.sizes {
+  display: flex;
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border: 1px solid $size-border-color;
+    border-radius: 50%;
+    font-size: 12px;
+    font-weight: 700;
+    color: $text-color-1;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color $transition-duration;
+
+    &:not(:last-child) {
+      margin-right: 11px;
+    }
+
+    &[data-size="true"] {
+      background-color: $decoration-color;
+    }
+  }
+}

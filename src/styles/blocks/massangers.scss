@@ -1,0 +1,69 @@
+.massangers {
+  display: flex;
+
+  .massanger {
+    display: block;
+    width: 41px;
+    height: 41px;
+    border: 2px solid $massanger-border-color;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:not(:first-child) {
+      margin-left: 16px;
+
+      @media (min-width: 769px) {
+        margin-left: 0;
+      }
+    }
+
+    &:nth-child(1) {
+      background: url("../icons/facebook.png") center center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(2) {
+      background: url("../icons/twitter.png") center center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(3) {
+      background: url("../icons/pinterest.png") center center;
+      background-repeat: no-repeat;
+    }
+
+    &:nth-child(4) {
+      background: url("../icons/youtube.png") center center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__close {
+    display: none;
+    position: relative;
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+
+    & > div {
+      position: absolute;
+      width: 28px;
+      height: 4px;
+      background-color: $massanger-border-color;
+      top: 50%;
+      transform: translateY(-50%);
+
+      &:first-child {
+        transform: rotate(45deg);
+      }
+
+      &:last-child {
+        transform: rotate(-45deg);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      display: block;
+    }
+  }
+}

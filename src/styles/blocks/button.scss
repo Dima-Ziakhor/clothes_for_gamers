@@ -1,0 +1,18 @@
+.button {
+  @include subtitle;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: $decoration-color;
+  border: none;
+  border-radius: 56px;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color $transition-duration;
+
+  &:hover {
+    background-color: $button-bgc-hover;
+  }
+}

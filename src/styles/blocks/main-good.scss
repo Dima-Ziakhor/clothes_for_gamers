@@ -1,7 +1,9 @@
 .main-good {
+  padding-top: 50px;
   background-color: $main-bgc;
 
   &__title {
+    margin-bottom: 31px;
     font-size: 24px;
     font-weight: 700;
     text-transform: uppercase;
@@ -9,7 +11,296 @@
     color: #282828;
   }
 
+  &__good-wrapper {
+    position: relative;
+    max-width: 855px;
+  }
+
+  &__image-wrapper {
+    margin-bottom: 19px;
+  }
+
   &__image {
     width: 100%;
+  }
+
+  &__id {
+    display: block;
+    margin-bottom: 18px;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    color: $text-color-2;
+  }
+
+  &__price {
+    margin-bottom: 13px;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  &__old-price {
+    color: $text-color-2;
+
+    & > span {
+      text-decoration: line-through;
+    }
+  }
+
+  &__new-price {
+    color: $new-price-color;
+  }
+
+  &__rating {
+    margin-bottom: 31px;
+  }
+
+  &__share {
+    display: none;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.025em;
+    color: $massanger-border-color;
+    cursor: pointer;
+    transition: color $transition-duration;
+
+    &:hover {
+      color: $share-hover-color;
+    }
+  }
+
+  &__actions-block {
+    margin-bottom: 33px;
+  }
+
+  &__description-block {
+    margin-bottom: 30px;
+    max-width: 370px;
+  }
+
+  &__description-title {
+    @include subtitle;
+
+    display: none;
+    margin-bottom: 14px;
+    letter-spacing: 0.025em;
+    color: $text-color-1;
+  }
+
+  &__description {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: 0.025em;
+    color: $text-color-1;
+  }
+
+  &__sizes {
+    margin-bottom: 29px;
+  }
+
+  &__sizes-title,
+  &__colors-title {
+    @include subtitle;
+
+    margin-bottom: 15px;
+  }
+
+  &__colors {
+    margin-bottom: 42px;
+  }
+
+  &__button {
+    max-width: 280px;
+    height: 56px;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .main-good {
+    &__good-wrapper {
+      display: flex;
+    }
+
+    &__image-wrapper {
+      padding-left: 40px;
+      min-width: 375px;
+      height: 354px;
+    }
+
+    &__info {
+      padding: 0 20px 0 40px;
+    }
+
+    &__id {
+      margin-bottom: 13px;
+      font-size: 11px;
+    }
+
+    &__contacts {
+      position: absolute;
+      top: 15px;
+      left: 56px;
+    }
+
+    &__massangers {
+      flex-direction: column;
+    }
+
+    &__massanger {
+      &:not(:last-child) {
+        margin-bottom: 10px;
+      }
+    }
+
+    &__price {
+      margin-bottom: 11px;
+    }
+
+    &__rating {
+      margin-bottom: 22px;
+    }
+
+    &__description-block {
+      margin-bottom: 19px;
+    }
+
+    &__description-title {
+      display: block;
+    }
+
+    &__sizes {
+      display: flex;
+      align-items: center;
+      margin-bottom: 11px;
+    }
+
+    &__sizes-title {
+      margin: 0 40px 0 0;
+
+      & > span {
+        display: none;
+      }
+    }
+
+    &__colors {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    &__colors-title {
+      margin: 0 15px 0 0;
+
+      & > span {
+        display: none;
+      }
+    }
+
+    &__button {
+      width: 222px;
+      height: 44px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .main-good {
+    &__title {
+      display: none;
+    }
+
+    &__title-additional {
+      @include subtitle;
+
+      margin-bottom: 19px;
+      font-size: 24px;
+    }
+
+    &__id {
+      margin-bottom: 25px;
+      font-size: 10px;
+    }
+
+    &__price {
+      font-size: 24px;
+    }
+
+    &__actions-block {
+      position: relative;
+      display: flex;
+      align-items: center;
+
+      & > div:first-child {
+        margin: 0 16px 0 0;
+      }
+    }
+
+    &__share {
+      display: block;
+      z-index: 1;
+    }
+
+    &__contacts[data-visible="false"] {
+      display: none;
+    }
+
+    &__contacts[data-visible="true"] {
+      display: block;
+    }
+
+    &__contacts {
+      padding: 26px 18px;
+      top: 30px;
+      left: 32px;
+      background-color: $color-white;
+      box-shadow: 0 0 5px 0 rgba(0 0 0 / 75%);
+
+      &::before {
+        content: "";
+        display: block;
+        position: absolute;
+        top: -40px;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 30px solid transparent;
+        border-bottom: 10px solid $color-white;
+        z-index: 0;
+      }
+    }
+
+    &__massangers {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__massanger:not(:last-child) {
+      margin: 0 13px 0 0;
+    }
+
+    &__sizes {
+      margin-bottom: 11px;
+    }
+
+    &__colors {
+      margin-bottom: 21px;
+    }
+
+    &__button {
+      margin: 0;
+      width: 214px;
+      height: 44px;
+    }
+
+    &__good-wrapper {
+      margin: 0 auto;
+    }
+
+    &__image-wrapper {
+      padding: 0;
+      margin: 0;
+    }
   }
 }

@@ -2,9 +2,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap");
 @import "./utils.scss/variables";
+@import "./utils.scss/mixins";
 @import "./blocks/container";
 @import "./blocks/stars";
+@import "./blocks/massangers";
+@import "./blocks/sizes";
+@import "./blocks/colors";
+@import "./blocks/button";
 @import "./blocks/main-good";
+@import "./blocks/others-goods";
+@import "./blocks/slider";
 
 html {
   font-family: "Open Sans", sans-serif;

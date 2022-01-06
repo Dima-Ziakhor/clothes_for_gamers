@@ -1,0 +1,53 @@
+.colors {
+  display: flex;
+
+  &__radio {
+    display: none;
+  }
+
+  &__label {
+    display: block;
+    margin-right: 7px;
+    height: 44px;
+    width: 44px;
+    border-radius: 50%;
+    transition: box-shadow $transition-duration;
+    cursor: pointer;
+
+    &:nth-child(2) {
+      background-color: $select-color-1;
+    }
+
+    &:nth-child(4) {
+      background-color: $select-color-2;
+    }
+
+    &:nth-child(6) {
+      background-color: $select-color-3;
+    }
+
+    &:nth-child(8) {
+      background-color: $select-color-4;
+    }
+
+    &:nth-child(2):hover {
+      box-shadow: 0 0 8px 2px $select-color-1-hover;
+    }
+
+    &:nth-child(4):hover {
+      box-shadow: 0 0 8px 2px $select-color-2-hover;
+    }
+
+    &:nth-child(6):hover {
+      box-shadow: 0 0 8px 2px $select-color-3-hover;
+    }
+
+    &:nth-child(8):hover {
+      box-shadow: 0 0 8px 2px $select-color-4-hover;
+    }
+
+    &[data-color="true"] {
+      border: 2px solid $text-color-1;
+    }
+  }
+}

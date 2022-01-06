@@ -1,0 +1,34 @@
+.others-goods {
+  padding: 44px 0;
+  background-color: $main-bgc;
+
+  &__title {
+    @include subtitle;
+
+    margin-bottom: 23px;
+    font-size: 24px;
+    text-align: center;
+  }
+
+  &__slider {
+    width: calc(100vw - 2 * 40px);
+  }
+}
+
+@media (min-width: 768px) {
+  .others-goods {
+    &__title {
+      margin-bottom: 35px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .others-goods {
+    &__title {
+      margin-bottom: 20px;
+      text-align-last: left;
+      padding-left: calc((100vw - 855px - 2 * 40px) / 2);
+    }
+  }
+}

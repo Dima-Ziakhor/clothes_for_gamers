@@ -1,0 +1,151 @@
+.slider {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+
+  &__items-wrapper {
+    display: flex;
+    overflow-x: hidden;
+  }
+
+  &__item {
+    display: none;
+    flex: 0 0 100%;
+    animation-name: slide;
+    animation-duration: 1s;
+  }
+
+  @keyframes slide {
+    from {
+      opacity: 0;
+    }
+
+    to {
+      opacity: 1;
+    }
+  }
+
+  &__item[data-status="active"] {
+    display: block;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    margin-bottom: 14px;
+  }
+
+  &__image {
+    width: 100%;
+  }
+
+  &__good-name {
+    @include subtitle;
+
+    color: $text-color-1;
+    text-align: center;
+  }
+
+  &__price {
+    position: absolute;
+    bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10px;
+    width: 100%;
+    height: 30px;
+    background-color: $decoration-color-light;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: 0.075em;
+    color: $text-color-2;
+  }
+
+  &__new-price {
+    color: $new-price-color;
+  }
+
+  &__old-price {
+    display: none;
+    margin-right: 10px;
+    text-decoration: line-through;
+  }
+
+  &__arrow {
+    display: block;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__previous {
+    left: -30px;
+  }
+
+  &__next {
+    right: -30px;
+  }
+}
+
+@media (min-width: 768px) {
+  .slider {
+    &__items-wrapper {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    &__item {
+      display: block;
+      flex: 0 0 300px;
+      margin-bottom: 31px;
+
+      &:nth-child(2n) {
+        margin-left: 40px;
+      }
+    }
+
+    &__arrow {
+      display: none;
+    }
+
+    &__image-wrapper {
+      margin-bottom: 17px;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .slider {
+    &__items-wrapper {
+      margin: 0 auto;
+      max-width: 855px;
+    }
+
+    &__item {
+      display: block;
+      flex: 0 0 265px;
+      margin-bottom: 26px;
+      transition: transform $transition-duration;
+
+      &:not(:nth-child(-3n)) {
+        margin-left: 0;
+        margin-right: 20px;
+      }
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    &__price {
+      bottom: 22px;
+      right: 0;
+      width: max-content;
+      background-color: $decoration-color;
+    }
+
+    &__old-price {
+      display: block;
+    }
+  }
+}
