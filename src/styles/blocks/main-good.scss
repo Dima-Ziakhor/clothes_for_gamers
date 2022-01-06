@@ -219,6 +219,7 @@
     &__title-additional {
       @include subtitle;
 
+      display: block;
       margin-bottom: 19px;
       font-size: 24px;
     }
